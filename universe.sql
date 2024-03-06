@@ -333,6 +333,16 @@ INSERT INTO public.planet VALUES (13, 'Arda', 5109, true, 20, 1.0, 10);
 -- Data for Name: race; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.race VALUES (1, 'Human', 'Great spirit but also great wish to kill themselves');
+INSERT INTO public.race VALUES (2, 'Elf', 'Noble, patient and pointed-eared');
+INSERT INTO public.race VALUES (3, 'Dwarf', 'Incredible hospitality and love to drink');
+INSERT INTO public.race VALUES (4, 'Marcian', 'Green and small but very smart');
+INSERT INTO public.race VALUES (5, 'Unicorn', 'One horn, seven colors of rainbow and love from all the girls');
+INSERT INTO public.race VALUES (6, 'Werewolf', 'One day it is a human, another day it is a big mad wolf');
+INSERT INTO public.race VALUES (8, 'Drainei', 'Pious exiles travelling through the space');
+INSERT INTO public.race VALUES (9, 'Orc', 'Big, stupid, green-skinned - a perfect murder weapon');
+INSERT INTO public.race VALUES (10, 'Goblin', 'Tricky but weak. Likes caves and darkness');
+INSERT INTO public.race VALUES (7, 'Elephant', 'Big, king and very very cute');
 
 
 --
@@ -376,7 +386,7 @@ SELECT pg_catalog.setval('public.planet_planet_id_seq', 13, true);
 -- Name: race_race_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.race_race_id_seq', 1, false);
+SELECT pg_catalog.setval('public.race_race_id_seq', 10, true);
 
 
 --
@@ -440,6 +450,14 @@ ALTER TABLE ONLY public.planet
 
 ALTER TABLE ONLY public.race
     ADD CONSTRAINT race_name_key UNIQUE (name);
+
+
+--
+-- Name: race race_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.race
+    ADD CONSTRAINT race_pkey PRIMARY KEY (race_id);
 
 
 --
