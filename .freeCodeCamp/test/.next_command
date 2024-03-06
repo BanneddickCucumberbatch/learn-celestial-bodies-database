@@ -103,3 +103,8 @@ pg_dump -cC --inserts -U freecodecamp universe > universe.sql
 git add .
 git init
 git add .
+git remote add origin https://github.com/BanneddickCucumberbatch/universesql.git
+git commit -m 'finished'
+git remote add origin https://github.com/BanneddickCucumberbatch/universesql.git
+git branch -M main
+git remote add origin https://github.com/BanneddickCucumberbatch/universesql.git
